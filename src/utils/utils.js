@@ -70,9 +70,12 @@ export const getScrollElement = (elementId: string): number => {
  * @return {void}
  */
 export const scrollTo = (scrollnumber: number = 0): number =>
-  window.requestAnimationFrame(() => {
-    window.scrollTo(0, scrollnumber);
-  });
+    setTimeout( () => {
+      window.scrollTo(0, scrollnumber);
+    }, 175 );
+  // window.requestAnimationFrame(() => {
+  //   window.scrollTo(0, scrollnumber);
+  // });
 
   /**
  * scroll to y number inside an element
